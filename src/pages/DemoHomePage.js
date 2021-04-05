@@ -1,6 +1,3 @@
-import LoginPage from "../pages/LoginPage";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
 const DemoHomePage = () => {
   return (
     <>
