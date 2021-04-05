@@ -50,7 +50,7 @@ const SendResetPasswordLinkPage = () => {
             required
             fullWidth
             id="email"
-            label="Email Address"
+            label="Enter Your Email Address"
             name="email"
             autoComplete="email"
             autoFocus
@@ -64,11 +64,6 @@ const SendResetPasswordLinkPage = () => {
           >
             Send Link to Email
           </Button>
-          <Grid item xs>
-            <Link href="#" variant="body2">
-              Forgot password?
-            </Link>
-          </Grid>
         </form>
       </div>
     </Container>
