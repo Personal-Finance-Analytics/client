@@ -19,8 +19,8 @@ const App = () => {
         <Route exact path="/sendresetlink" component={SendResetPasswordLinkPage}/>
         <Route exact path="/confirm" component={ConfirmationPage} />
 
-        // Need to implement protected routes for pages below as
-        // they can only be visible once authorised and authenticated
+        {/* Need to implement protected routes for pages below as
+        they can only be visible once authorised and authenticated */}
         <Route exact path="/mingyang" component={DashboardMingyang} />
         <Route exact path="/seongjune" component={DashboardSeongjune} />
         <Route exact path="/harpreet" component={DashboardHarpreet} />
