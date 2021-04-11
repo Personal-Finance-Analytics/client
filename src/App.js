@@ -5,7 +5,6 @@ import ResetPasswordPage from "./pages/ResetPasswordPage";
 import LoginPage from "./pages/LoginPage";
 import DemoHomePage from "./pages/DemoHomePage";
 import DashboardMingyang from "./pages/DashboardMingyang";
-import DashboardSeongjune from './pages/DashboardSeongjune';
 import DashboardHarpreet from './pages/DashboardHarpreet';
 
 const App = () => {
@@ -22,7 +21,6 @@ const App = () => {
         {/* Need to implement protected routes for pages below as
         they can only be visible once authorised and authenticated */}
         <Route exact path="/mingyang" component={DashboardMingyang} />
-        <Route exact path="/seongjune" component={DashboardSeongjune} />
         <Route exact path="/harpreet" component={DashboardHarpreet} />
       </Router>
     </div>
