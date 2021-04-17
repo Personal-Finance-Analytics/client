@@ -1,3 +1,1 @@
-Demo: https://pfa-client-dev.netlify.app/
-
-New demo to be hosted on WS Amplify
+Demo: https://main.d6z2lmxwwmlx0.amplifyapp.com/
