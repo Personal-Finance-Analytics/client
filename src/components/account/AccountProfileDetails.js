@@ -27,12 +27,12 @@ const states = [
 
 const AccountProfileDetails = (props) => {
   const [values, setValues] = useState({
-    firstName: 'Katarina',
-    lastName: 'Smith',
-    email: 'demo@devias.io',
+    firstName: '',
+    lastName: '',
+    email: '',
     phone: '',
-    state: 'Alabama',
-    country: 'USA'
+    state: '',
+    country: ''
   });
 
   const handleChange = (event) => {
