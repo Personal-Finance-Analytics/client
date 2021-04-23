@@ -1,4 +1,1 @@
-const IncomeBySource = () => {
-    return <h2>IncomeBySource</h2>
-}
-export default IncomeBySource;
+const IncomeBySource = 0;

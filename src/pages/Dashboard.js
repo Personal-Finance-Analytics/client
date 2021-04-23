@@ -1,13 +1,9 @@
 import { Helmet } from 'react-helmet';
-import {
-  Box,
-  Container,
-  Grid
-} from '@material-ui/core';
+import { Box, Container, Grid } from '@material-ui/core';
 // import Budget from 'src/components/dashboard//Budget';
 
-import LatestOrders from 'src/components/dashboard//LatestOrders';
-import LatestProducts from 'src/components/dashboard//LatestProducts';
+// import LatestOrders from 'src/components/dashboard//LatestOrders';
+// import LatestProducts from 'src/components/dashboard//LatestProducts';
 import Sales from 'src/components/dashboard//Sales';
 // import TasksProgress from 'src/components/dashboard//TasksProgress';
 // import TotalCustomers from 'src/components/dashboard//TotalCustomers';
@@ -26,7 +22,7 @@ import AverageWeeklyExpenses from '../components/dashboard/cards/AverageWeeklyEx
 const Dashboard = () => (
   <>
     <Helmet>
-      <title>Dashboard | Demo</title>
+      <title>Demo | Personal Finance Analytics</title>
     </Helmet>
     <Box
       sx={{
@@ -36,62 +32,23 @@ const Dashboard = () => (
       }}
     >
       <Container maxWidth={false}>
-        <Grid
-          container
-          spacing={3}
-        >
-          <Grid
-            item
-            lg={3}
-            sm={6}
-            xl={3}
-            xs={12}
-          >
+        <Grid container spacing={3}>
+          <Grid item lg={3} sm={6} xl={3} xs={12}>
             <TotalIncome />
           </Grid>
-          <Grid
-            item
-            lg={3}
-            sm={6}
-            xl={3}
-            xs={12}
-          >
+          <Grid item lg={3} sm={6} xl={3} xs={12}>
             <TotalExpenses />
           </Grid>
-          <Grid
-            item
-            lg={3}
-            sm={6}
-            xl={3}
-            xs={12}
-          >
+          <Grid item lg={3} sm={6} xl={3} xs={12}>
             <AverageDailyIncome />
           </Grid>
-          <Grid
-            item
-            lg={3}
-            sm={6}
-            xl={3}
-            xs={12}
-          >
+          <Grid item lg={3} sm={6} xl={3} xs={12}>
             <AverageDailyExpenses sx={{ height: '100%' }} />
           </Grid>
-          <Grid
-            item
-            lg={3}
-            sm={6}
-            xl={3}
-            xs={12}
-          >
+          <Grid item lg={3} sm={6} xl={3} xs={12}>
             <AverageWeeklyIncome />
           </Grid>
-          <Grid
-            item
-            lg={3}
-            sm={6}
-            xl={3}
-            xs={12}
-          >
+          <Grid item lg={3} sm={6} xl={3} xs={12}>
             <AverageWeeklyExpenses sx={{ height: '100%' }} />
           </Grid>
 
@@ -113,41 +70,17 @@ const Dashboard = () => (
           >
             <AverageMonthlyExpenses sx={{ height: '100%' }} />
           </Grid> */}
-          <Grid
-            item
-            lg={8}
-            md={12}
-            xl={9}
-            xs={12}
-          >
+          <Grid item lg={8} md={12} xl={9} xs={12}>
             <Sales />
           </Grid>
-          <Grid
-            item
-            lg={4}
-            md={6}
-            xl={3}
-            xs={12}
-          >
+          <Grid item lg={4} md={6} xl={3} xs={12}>
             <TrafficByDevice sx={{ height: '100%' }} />
           </Grid>
-          <Grid
-            item
-            lg={4}
-            md={6}
-            xl={3}
-            xs={12}
-          >
-            <LatestProducts sx={{ height: '100%' }} />
+          <Grid item lg={4} md={6} xl={3} xs={12}>
+            {/* <IncomeBySource sx={{ height: '100%' }} /> */}
           </Grid>
-          <Grid
-            item
-            lg={8}
-            md={12}
-            xl={9}
-            xs={12}
-          >
-            <LatestOrders />
+          <Grid item lg={8} md={12} xl={9} xs={12}>
+            {/* <LatestOrders /> */}
           </Grid>
         </Grid>
       </Container>

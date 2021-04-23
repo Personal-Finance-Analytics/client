@@ -11,7 +11,8 @@ import {
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/NotificationsOutlined';
-import InputIcon from '@material-ui/icons/Input';
+// import InputIcon from '@material-ui/icons/Input';
+import Button from '@material-ui/core/Button';
 import Logo from './Logo';
 
 const DashboardNavbar = ({ onMobileNavOpen, ...rest }) => {
@@ -38,7 +39,9 @@ const DashboardNavbar = ({ onMobileNavOpen, ...rest }) => {
             </Badge>
           </IconButton>
           <IconButton color="inherit">
-            <InputIcon />
+            <Button variant="contained" color="secondary">
+              Login
+            </Button>
           </IconButton>
         </Hidden>
         <Hidden lgUp>
