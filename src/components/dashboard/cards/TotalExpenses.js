@@ -9,43 +9,51 @@ import {
 import { green } from '@material-ui/core/colors';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import PeopleIcon from '@material-ui/icons/PeopleOutlined';
+import { useContext } from 'react';
+import GlobalContext from '../../../contexts/GlobalContext';
 
-const TotalExpenses = (props) => (
-  <Card {...props}>
-    <CardContent>
-      <Grid container spacing={3} sx={{ justifyContent: 'space-between' }}>
-        <Grid item>
-          <Typography color="textSecondary" gutterBottom variant="h6">
-            Total Expenses
-          </Typography>
-          <Typography color="textPrimary" variant="h3">
-            $ 1,600
-          </Typography>
+const TotalExpenses = (props) => {
+  const { DemoExpenses } = useContext(GlobalContext);
+  const arrOfExpenses = DemoExpenses.map((inc) => inc.amount_nzd * 1);
+  const totalExpenses = arrOfExpenses.reduce((a, b) => a + b, 0);
+  return (
+    <Card {...props}>
+      <CardContent>
+        <Grid container spacing={3} sx={{ justifyContent: 'space-between' }}>
+          <Grid item>
+            <Typography color="textSecondary" gutterBottom variant="h6">
+              Total Expenses
+            </Typography>
+            <Typography color="textPrimary" variant="h3">
+              $
+              {' '}
+              {parseFloat(totalExpenses).toFixed(2)}
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Avatar
+              sx={{ backgroundColor: green[600], height: 56, width: 56 }}
+            >
+              <PeopleIcon />
+            </Avatar>
+          </Grid>
         </Grid>
-        <Grid item>
-          <Avatar
-            sx={{ backgroundColor: green[600], height: 56, width: 56 }}
-          >
-            <PeopleIcon />
-          </Avatar>
-        </Grid>
-      </Grid>
-      <Box
-        sx={{ alignItems: 'center', display: 'flex', pt: 2 }}
-      >
-        <ArrowUpwardIcon sx={{ color: green[900] }} />
-        <Typography
-          variant="body2"
-          sx={{ color: green[900], mr: 1 }}
+        <Box
+          sx={{ alignItems: 'center', display: 'flex', pt: 2 }}
         >
-          16%
-        </Typography>
-        <Typography color="textSecondary" variant="caption">
-          Since last month
-        </Typography>
-      </Box>
-    </CardContent>
-  </Card>
-);
-
+          <ArrowUpwardIcon sx={{ color: green[900] }} />
+          <Typography
+            variant="body2"
+            sx={{ color: green[900], mr: 1 }}
+          >
+            16%
+          </Typography>
+          <Typography color="textSecondary" variant="caption">
+            Since last month
+          </Typography>
+        </Box>
+      </CardContent>
+    </Card>
+  );
+};
 export default TotalExpenses;

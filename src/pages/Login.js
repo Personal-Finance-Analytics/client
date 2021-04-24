@@ -1,4 +1,5 @@
-import { Link as RouterLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+// import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
@@ -6,13 +7,13 @@ import {
   Box,
   Button,
   Container,
-  Grid,
-  Link,
+  // Grid,
+  // Link,
   TextField,
   Typography
 } from '@material-ui/core';
-import FacebookIcon from 'src/icons/Facebook';
-import GoogleIcon from 'src/icons/Google';
+// import FacebookIcon from 'src/icons/Facebook';
+// import GoogleIcon from 'src/icons/Google';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -60,17 +61,10 @@ const Login = () => {
                     color="textPrimary"
                     variant="h2"
                   >
-                    Sign in
-                  </Typography>
-                  <Typography
-                    color="textSecondary"
-                    gutterBottom
-                    variant="body2"
-                  >
-                    Sign in on the internal platform
+                    Internal Login
                   </Typography>
                 </Box>
-                <Grid
+                {/* <Grid
                   container
                   spacing={3}
                 >
@@ -105,20 +99,20 @@ const Login = () => {
                       Login with Google
                     </Button>
                   </Grid>
-                </Grid>
+                </Grid> */}
                 <Box
                   sx={{
                     pb: 1,
                     pt: 3
                   }}
                 >
-                  <Typography
+                  {/* <Typography
                     align="center"
                     color="textSecondary"
                     variant="body1"
                   >
                     or login with email address
-                  </Typography>
+                  </Typography> */}
                 </Box>
                 <TextField
                   error={Boolean(touched.email && errors.email)}
@@ -155,10 +149,10 @@ const Login = () => {
                     type="submit"
                     variant="contained"
                   >
-                    Sign in now
+                    Let me in
                   </Button>
                 </Box>
-                <Typography
+                {/* <Typography
                   color="textSecondary"
                   variant="body1"
                 >
@@ -171,7 +165,7 @@ const Login = () => {
                   >
                     Sign up
                   </Link>
-                </Typography>
+                </Typography> */}
               </form>
             )}
           </Formik>
