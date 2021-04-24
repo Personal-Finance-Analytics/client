@@ -19,7 +19,7 @@ const TotalExpenses = (props) => (
             Total Expenses
           </Typography>
           <Typography color="textPrimary" variant="h3">
-            1,600
+            $ 1,600
           </Typography>
         </Grid>
         <Grid item>

@@ -19,7 +19,7 @@ const AverageDailyIncome = (props) => (
             Average Daily Income
           </Typography>
           <Typography color="textPrimary" variant="h3">
-            $500
+            $ 500
           </Typography>
         </Grid>
         <Grid item>

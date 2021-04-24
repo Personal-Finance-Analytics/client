@@ -7,7 +7,7 @@ import theme from 'src/theme';
 import routes from 'src/routes';
 import DemoIncome from './__mocks__/DemoIncome';
 import DemoExpenses from './__mocks__/DemoExpenses';
-import GlobalContext from './contexts/GlobalContexts';
+import GlobalContext from './contexts/GlobalContext';
 
 const App = () => {
   const routing = useRoutes(routes);

@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+
 import { Helmet } from 'react-helmet';
 import { Box, Container, Grid } from '@material-ui/core';
 // import Budget from 'src/components/dashboard//Budget';
@@ -10,81 +12,88 @@ import Sales from 'src/components/dashboard//Sales';
 // import TotalProfit from 'src/components/dashboard//TotalProfit';
 import TrafficByDevice from 'src/components/dashboard//TrafficByDevice';
 
+import GlobalContext from '../contexts/GlobalContext';
+
 import TotalIncome from '../components/dashboard/cards/TotalIncome';
 import TotalExpenses from '../components/dashboard/cards/TotalExpenses';
 import AverageDailyIncome from '../components/dashboard/cards/AverageDailyIncome';
 import AverageDailyExpenses from '../components/dashboard/cards/AverageDailyExpenses';
 import AverageWeeklyIncome from '../components/dashboard/cards/AverageWeeklyIncome';
 import AverageWeeklyExpenses from '../components/dashboard/cards/AverageWeeklyExpenses';
-// import AverageMonthlyIncome from '../components/dashboard/cards/AverageMonthlyIncome';
-// import AverageMonthlyExpenses from '../components/dashboard/cards/AverageMonthlyExpenses';
+import AverageMonthlyIncome from '../components/dashboard/cards/AverageMonthlyIncome';
+import AverageMonthlyExpenses from '../components/dashboard/cards/AverageMonthlyExpenses';
+// import IncomeBySource from '../components/dashboard/pieCharts/IncomeBySource';
 
-const Dashboard = () => (
-  <>
-    <Helmet>
-      <title>Demo | Personal Finance Analytics</title>
-    </Helmet>
-    <Box
-      sx={{
-        backgroundColor: 'background.default',
-        minHeight: '100%',
-        py: 3
-      }}
-    >
-      <Container maxWidth={false}>
-        <Grid container spacing={3}>
-          <Grid item lg={3} sm={6} xl={3} xs={12}>
-            <TotalIncome />
-          </Grid>
-          <Grid item lg={3} sm={6} xl={3} xs={12}>
-            <TotalExpenses />
-          </Grid>
-          <Grid item lg={3} sm={6} xl={3} xs={12}>
-            <AverageDailyIncome />
-          </Grid>
-          <Grid item lg={3} sm={6} xl={3} xs={12}>
-            <AverageDailyExpenses sx={{ height: '100%' }} />
-          </Grid>
-          <Grid item lg={3} sm={6} xl={3} xs={12}>
-            <AverageWeeklyIncome />
-          </Grid>
-          <Grid item lg={3} sm={6} xl={3} xs={12}>
-            <AverageWeeklyExpenses sx={{ height: '100%' }} />
-          </Grid>
+const Dashboard = () => {
+  const { DemoIncome } = useContext(GlobalContext);
+  console.log(DemoIncome.length);
+  return (
+    <>
+      <Helmet>
+        <title>Demo | Personal Finance Analytics</title>
+      </Helmet>
+      <Box
+        sx={{
+          backgroundColor: 'background.default',
+          minHeight: '100%',
+          py: 3
+        }}
+      >
+        <Container maxWidth={false}>
+          <Grid container spacing={3}>
+            <Grid item lg={3} sm={6} xl={3} xs={12}>
+              <TotalIncome />
+            </Grid>
+            <Grid item lg={3} sm={6} xl={3} xs={12}>
+              <TotalExpenses />
+            </Grid>
+            <Grid item lg={3} sm={6} xl={3} xs={12}>
+              <AverageDailyIncome />
+            </Grid>
+            <Grid item lg={3} sm={6} xl={3} xs={12}>
+              <AverageDailyExpenses sx={{ height: '100%' }} />
+            </Grid>
+            <Grid item lg={3} sm={6} xl={3} xs={12}>
+              <AverageWeeklyIncome />
+            </Grid>
+            <Grid item lg={3} sm={6} xl={3} xs={12}>
+              <AverageWeeklyExpenses sx={{ height: '100%' }} />
+            </Grid>
 
-          {/* <Grid
-            item
-            lg={3}
-            sm={6}
-            xl={3}
-            xs={12}
-          >
-            <AverageMonthlyIncome />
+            <Grid
+              item
+              lg={3}
+              sm={6}
+              xl={3}
+              xs={12}
+            >
+              <AverageMonthlyIncome />
+            </Grid>
+            <Grid
+              item
+              lg={3}
+              sm={6}
+              xl={3}
+              xs={12}
+            >
+              <AverageMonthlyExpenses sx={{ height: '100%' }} />
+            </Grid>
+            <Grid item lg={8} md={12} xl={9} xs={12}>
+              <Sales />
+            </Grid>
+            <Grid item lg={4} md={6} xl={3} xs={12}>
+              <TrafficByDevice sx={{ height: '100%' }} />
+            </Grid>
+            <Grid item lg={4} md={6} xl={3} xs={12}>
+              {/* <IncomeBySource sx={{ height: '100%' }} /> */}
+            </Grid>
+            <Grid item lg={8} md={12} xl={9} xs={12}>
+              {/* <LatestOrders /> */}
+            </Grid>
           </Grid>
-          <Grid
-            item
-            lg={3}
-            sm={6}
-            xl={3}
-            xs={12}
-          >
-            <AverageMonthlyExpenses sx={{ height: '100%' }} />
-          </Grid> */}
-          <Grid item lg={8} md={12} xl={9} xs={12}>
-            <Sales />
-          </Grid>
-          <Grid item lg={4} md={6} xl={3} xs={12}>
-            <TrafficByDevice sx={{ height: '100%' }} />
-          </Grid>
-          <Grid item lg={4} md={6} xl={3} xs={12}>
-            {/* <IncomeBySource sx={{ height: '100%' }} /> */}
-          </Grid>
-          <Grid item lg={8} md={12} xl={9} xs={12}>
-            {/* <LatestOrders /> */}
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
-  </>
-);
+        </Container>
+      </Box>
+    </>
+  );
+};
 export default Dashboard;
