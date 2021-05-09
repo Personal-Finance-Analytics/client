@@ -56,31 +56,31 @@ const DailyComposedChart = () => {
       amt: 2100,
     },
   ];
-    return (
-      <ResponsiveContainer width="100%" height="100%">
-        <LineChart
-          width={500}
-          height={300}
-          data={data}
-          margin={{
-            top: 20,
-            right: 50,
-            left: 20,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <ReferenceLine y={650} label="Daily Average Income" stroke="red" />
-          <ReferenceLine y={331} label="Daily Average Expenses" stroke="Blue" />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        </LineChart>
-      </ResponsiveContainer>
-    );
+  return (
+    <ResponsiveContainer width="100%" height="100%">
+      <LineChart
+        width={500}
+        height={300}
+        data={data}
+        margin={{
+          top: 20,
+          right: 50,
+          left: 20,
+          bottom: 5,
+        }}
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <ReferenceLine y={650} label="Daily Average Income" stroke="red" />
+        <ReferenceLine y={331} label="Daily Average Expenses" stroke="Blue" />
+        <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+      </LineChart>
+    </ResponsiveContainer>
+  );
 };
 export default DailyComposedChart;
 // Adpoted from LineChartWithReferenceLines (Recharts.js): https://recharts.org/en-US/examples/LineChartWithReferenceLines
