@@ -15,7 +15,7 @@ const ExpensesByPaymentType = () => {
   const { DemoExpenses, isMobile } = useContext(GlobalContext);
   const sourceData = useExpensesByPaymentType(DemoExpenses);
 
-   // Now, create random colors based on sourceData generated
+  // Now, create random colors based on sourceData generated
   const { labels, datasets } = sourceData;
   const backgroundColor = labels.map(() => useRandomColor());
 
