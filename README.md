@@ -1,4 +1,4 @@
-Demo unavailable due to budget issue, but feel free to clone and run it locally
+Demo: https://main.d6z2lmxwwmlx0.amplifyapp.com/
 <br>
 
 Data Visualisation on "pie-steroids"!
