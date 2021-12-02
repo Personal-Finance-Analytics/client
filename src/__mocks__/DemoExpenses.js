@@ -17,7 +17,7 @@ const DemoExpenses = [
   },
   {
     date: '31/03/2021',
-    item_name: 'Parking taka',
+    item_name: 'Parking',
     amount_nzd: 0.7,
     type: 'Daily Spending',
     sub_type: 'Parking',
@@ -48,36 +48,12 @@ const DemoExpenses = [
     payment_type: 'Efpos-1234'
   },
   {
-    date: '25/03/2021',
-    item_name: 'Kmart',
-    amount_nzd: 10.9,
-    type: 'Daily Spending',
-    sub_type: 'Food',
-    payment_type: 'Efpos-1234'
-  },
-  {
-    date: '22/03/2021',
-    item_name: 'AA ',
-    amount_nzd: 129.13,
-    type: 'Bills',
-    sub_type: 'AA Insurance',
-    payment_type: 'Bank-Transfer-2345'
-  },
-  {
     date: '21/03/2021',
     item_name: 'Eat out',
     amount_nzd: 16.0,
     type: 'Daily Spending',
     sub_type: 'Food',
     payment_type: 'Efpos-1234'
-  },
-  {
-    date: '21/03/2021',
-    item_name: 'Spark overdue',
-    amount_nzd: 116.29,
-    type: 'Bills',
-    sub_type: 'Mobile Plan',
-    payment_type: 'Credit_card-2345'
   },
   {
     date: '21/03/2021',
@@ -139,14 +115,6 @@ const DemoExpenses = [
     date: '16/03/2021',
     item_name: 'KFC',
     amount_nzd: 14.5,
-    type: 'Daily Spending',
-    sub_type: 'Food',
-    payment_type: 'Efpos-1234'
-  },
-  {
-    date: '14/03/2021',
-    item_name: "Fraser's",
-    amount_nzd: 9.8,
     type: 'Daily Spending',
     sub_type: 'Food',
     payment_type: 'Efpos-1234'
@@ -328,14 +296,6 @@ const DemoExpenses = [
     payment_type: 'Credit_card-2345'
   },
   {
-    date: '17/02/2021',
-    item_name: 'Swim*10',
-    amount_nzd: 100.0,
-    type: 'Sports',
-    sub_type: 'Swim',
-    payment_type: 'Bank_Transfer-1234'
-  },
-  {
     date: '18/02/2021',
     item_name: 'Eating out',
     amount_nzd: 72.5,
@@ -376,22 +336,6 @@ const DemoExpenses = [
     payment_type: 'Efpos-1234+Cash'
   },
   {
-    date: '12/02/2021',
-    item_name: 'Coffee',
-    amount_nzd: 4.0,
-    type: 'Daily Spending',
-    sub_type: 'Food',
-    payment_type: 'PayPal-main'
-  },
-  {
-    date: '09/02/2021',
-    item_name: 'Surface laptop',
-    amount_nzd: 1199.0,
-    type: 'Electronics',
-    sub_type: 'Laptop',
-    payment_type: 'Efpos-1234'
-  },
-  {
     date: '08/02/2021',
     item_name: 'Coffee chat',
     amount_nzd: 11.0,
@@ -421,14 +365,6 @@ const DemoExpenses = [
     amount_nzd: 10.0,
     type: 'Travel',
     sub_type: 'Nelson Trip Jan 2021',
-    payment_type: 'Efpos-1234'
-  },
-  {
-    date: '01/02/2021',
-    item_name: 'Cafe food',
-    amount_nzd: 9.9,
-    type: 'Travel',
-    sub_type: 'Food',
     payment_type: 'Efpos-1234'
   },
   {
@@ -488,14 +424,6 @@ const DemoExpenses = [
     payment_type: 'Credit_card-2345'
   },
   {
-    date: '26/01/2021',
-    item_name: '2 bottles water',
-    amount_nzd: 11.58,
-    type: 'Travel',
-    sub_type: 'Grocery',
-    payment_type: 'PayPal-main'
-  },
-  {
     date: '25/01/2021',
     item_name: 'Batteries',
     amount_nzd: 19.0,
@@ -552,22 +480,6 @@ const DemoExpenses = [
     payment_type: 'Credit_card-2345'
   },
   {
-    date: '20/01/2021',
-    item_name: 'Bakery lunch',
-    amount_nzd: 2.19,
-    type: 'Daily Spending',
-    sub_type: 'Food',
-    payment_type: 'Efpos-1234'
-  },
-  {
-    date: '20/01/2021',
-    item_name: 'Bakery lunch',
-    amount_nzd: 4.0,
-    type: 'Daily Spending',
-    sub_type: 'Food',
-    payment_type: 'Credit_card-2345'
-  },
-  {
     date: '18/01/2021',
     item_name: 'Event ticket',
     amount_nzd: 90.0,
@@ -599,110 +511,6 @@ const DemoExpenses = [
     sub_type: 'Stationary',
     payment_type: 'PayPal-main'
   },
-  {
-    date: '19/01/2021',
-    item_name: 'Burger+chips',
-    amount_nzd: 12.0,
-    type: 'Daily Spending',
-    sub_type: 'Food',
-    payment_type: 'Efpos-1234'
-  },
-  {
-    date: '15/01/2021',
-    item_name: 'Pie lunch',
-    amount_nzd: 8.9,
-    type: 'Daily Spending',
-    sub_type: 'Food',
-    payment_type: 'Credit_card-2345'
-  },
-  {
-    date: '15/01/2021',
-    item_name: 'Cafe lunch',
-    amount_nzd: 19.8,
-    type: 'Daily Spending',
-    sub_type: 'Food',
-    payment_type: 'Efpos-1234'
-  },
-  {
-    date: '13/01/2021',
-    item_name: 'Sushi lunch',
-    amount_nzd: 9.1,
-    type: 'Daily Spending',
-    sub_type: 'Food',
-    payment_type: 'Credit_card-2345'
-  },
-  {
-    date: '11/01/2021',
-    item_name: 'Fuel',
-    amount_nzd: 50.0,
-    type: 'Bills',
-    sub_type: 'Fuel',
-    payment_type: 'Efpos-1234'
-  },
-  {
-    date: '08/01/2021',
-    item_name: 'Water bill',
-    amount_nzd: 60.0,
-    type: 'Bills',
-    sub_type: 'Water bill',
-    payment_type: 'Bank_Transfer-1234'
-  },
-  {
-    date: '08/01/2021',
-    item_name: 'Cafe lunch',
-    amount_nzd: 26.7,
-    type: 'Daily Spending',
-    sub_type: 'Food',
-    payment_type: 'Efpos-1234'
-  },
-  {
-    date: '07/01/2021',
-    item_name: 'Beer',
-    amount_nzd: 8.0,
-    type: 'Daily Spending',
-    sub_type: 'Food',
-    payment_type: 'Efpos-1234'
-  },
-  {
-    date: '07/01/2021',
-    item_name: 'Pie+custard',
-    amount_nzd: 7.5,
-    type: 'Daily Spending',
-    sub_type: 'Food',
-    payment_type: 'Credit_card-2345'
-  },
-  {
-    date: '07/01/2021',
-    item_name: 'Haitcut',
-    amount_nzd: 15.0,
-    type: 'Daily Spending',
-    sub_type: 'Haircut',
-    payment_type: 'Bank_Transfer-1234'
-  },
-  {
-    date: '05/01/2021',
-    item_name: 'Beach Shorts',
-    amount_nzd: 16.0,
-    type: 'Daily Spending',
-    sub_type: 'Clothing',
-    payment_type: 'PayPal-main'
-  },
-  {
-    date: '06/01/2021',
-    item_name: 'New World',
-    amount_nzd: 25.49,
-    type: 'Daily Spending',
-    sub_type: 'Grocery',
-    payment_type: 'Efpos-1234'
-  },
-  {
-    date: '03/04/2021',
-    item_name: 'Burger+chips',
-    amount_nzd: 6.5,
-    type: 'Daily Spending',
-    sub_type: 'Food',
-    payment_type: 'Spare_coins'
-  }
 ];
 
 export default DemoExpenses;
